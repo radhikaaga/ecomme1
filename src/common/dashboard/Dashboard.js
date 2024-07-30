@@ -1,6 +1,6 @@
-// src/common/dashboard/Dashboard.js
+
 import React from 'react';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import {  Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import Navbar from './Navbar';
 import './Dashboard.css'; 

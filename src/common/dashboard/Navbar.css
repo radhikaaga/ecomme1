@@ -1,10 +1,7 @@
-/* Basic reset */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
-
-/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -12,13 +9,11 @@ body {
   background-color: #333;
   color: white;
   padding: 10px 20px;
-  position: fixed; /* Fixed position for sticky navbar */
+  position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000; /* Ensures the navbar is above other content */
+  z-index: 1000; 
 }
-
-/* Left side of the navbar */
 .navbar-left {
   flex: 1;
 }
@@ -28,8 +23,6 @@ body {
   color: white;
   text-decoration: none;
 }
-
-/* Center of the navbar */
 .navbar-center {
   flex: 2;
   display: flex;
@@ -42,10 +35,8 @@ body {
   border: none;
   border-radius: 5px;
   width: 80%;
-  box-sizing: border-box; /* Include padding in width calculation */
+  box-sizing: border-box; 
 }
-
-/* Search button */
 .search-button {
   padding: 5px 10px;
   border: none;
@@ -54,8 +45,6 @@ body {
   color: white;
   cursor: pointer;
 }
-
-/* Right side of the navbar */
 .navbar-right {
   flex: 1;
   display: flex;
@@ -63,8 +52,6 @@ body {
   justify-content: flex-end;
   gap: 15px;
 }
-
-/* Navbar links */
 .navbar-link {
   text-decoration: none;
   color: white;
@@ -76,8 +63,6 @@ body {
 .navbar-link:hover {
   background-color: #555;
 }
-
-/* Navbar icons */
 .navbar-icon {
   position: relative;
   display: flex;
@@ -88,9 +73,8 @@ body {
 .navbar-icon img {
   width: 24px;
   height: 24px;
-  margin-right: 5px; /* Spacing between icon and text */
+  margin-right: 5px; 
 }
-
 .cart-icon, .profile-icon {
   position: relative;
 }
@@ -105,8 +89,6 @@ body {
   padding: 2px 6px;
   font-size: 0.75rem;
 }
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -120,7 +102,7 @@ body {
   }
 
   .navbar-search {
-    width: calc(100% - 80px); /* Adjust width to fit within navbar */
+    width: calc(100% - 80px); 
     margin-right: 0;
   }
 
@@ -134,7 +116,7 @@ body {
   }
 
   .navbar-icon img {
-    width: 20px; /* Smaller icons for smaller screens */
+    width: 20px; 
     height: 20px;
   }
 
@@ -150,7 +132,7 @@ body {
   }
 
   .navbar-search {
-    width: calc(100% - 60px); /* Further adjust width for mobile screens */
+    width: calc(100% - 60px); 
   }
 
   .navbar-center {

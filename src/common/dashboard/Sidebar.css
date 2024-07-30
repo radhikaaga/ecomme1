@@ -1,148 +1,114 @@
-/* Sidebar.css */
 
-/* Sidebar container */
 .sidebar {
-  width: 250px; /* Width of the sidebar */
-  background-color: #f4f4f4; /* Light gray background */
-  padding: 20px; /* Padding inside the sidebar */
-  border-right: 1px solid #ddd; /* Light border on the right */
-  height: 100vh; /* Full height of the viewport */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for better separation */
-  position: fixed; /* Fixed position to stay in place */
+  width: 250px; 
+  background-color: #f4f4f4; 
+  padding: 20px; 
+  border-right: 1px solid #ddd; 
+  height: 100vh; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  position: fixed;
   top: 0;
   left: 0;
-  overflow-y: auto; /* Scroll if content overflows */
-  transform: translateX(0); /* Ensure it starts visible */
-  transition: transform 0.3s ease; /* Smooth transition for hiding */
+  overflow-y: auto; 
+  transform: translateX(0);
+  transition: transform 0.3s ease; 
 }
-
-/* Sidebar hidden */
 .sidebar.hidden {
-  transform: translateX(-100%); /* Move the sidebar out of view */
+  transform: translateX(-100%); 
 }
-
-/* Sidebar heading */
 .sidebar h2 {
-  margin-top: 0; /* Remove margin from the top */
-  font-size: 1.5rem; /* Size of the heading */
-  color: #333; /* Dark gray color for the text */
+  margin-top: 0; 
+  font-size: 1.5rem; 
+  color: #333; 
 }
-
-/* Sidebar menu list */
 .sidebar ul {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+  list-style-type: none;
+  padding: 0; 
+  margin: 0;
 }
-
-/* Sidebar menu items */
 .sidebar ul li {
-  margin: 10px 0; /* Space between menu items */
+  margin: 10px 0;
 }
-
-/* Sidebar menu links */
 .sidebar ul li a {
-  text-decoration: none; /* Remove underline */
-  color: #333; /* Dark gray color for links */
-  display: block; /* Make links block-level for padding */
-  padding: 10px 15px; /* Padding around the link */
-  border-radius: 5px; /* Rounded corners for links */
-  transition: background-color 0.3s; /* Smooth background color transition */
+  text-decoration: none;
+  color: #333; 
+  display: block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s; 
 }
 
-/* Sidebar menu link hover */
+
 .sidebar ul li a:hover {
-  background-color: #ddd; /* Light gray background on hover */
+  background-color: #ddd; 
 }
-
-/* Active link */
 .sidebar ul li a.active {
-  background-color: #007bff; /* Blue background for active link */
-  color: white; /* White text for active link */
+  background-color: #007bff;
+  color: white; 
 }
 
 .icon, .link_text {
   font-size: 20px;
 }
-
-/* Responsive Styles */
 @media (max-width: 768px) {
   .sidebar {
-    width: 200px; /* Adjust width for smaller screens */
+    width: 200px;
   }
 
   .icon, .link_text {
-    font-size: 18px; /* Adjust icon size for smaller screens */
+    font-size: 18px; 
   }
 }
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 150px; /* Further adjust width for mobile screens */
+    width: 150px; 
   }
 
   .icon, .link_text {
-    font-size: 16px; /* Further adjust icon size for mobile screens */
+    font-size: 16px;
   }
 }
 
-/* Toggle Button */
-/* Sidebar Toggle Button */
-/* Sidebar Toggle Button */
 .sidebar-toggle {
   position: fixed;
-  top: 40px; /* Adjusted to move the button slightly lower */
+  top: 40px;
   left: 20px;
   cursor: pointer;
-  z-index: 200; /* Ensure toggle button is above other content */
-  background-color: black; /* Blue background */
-  color: white; /* White text */
-  border: none; /* Remove default border */
-  border-radius: 50%; /* Make it circular */
-  padding: 8px; /* Smaller padding */
-  font-size: 0.9rem; /* Smaller font size */
-  width: 40px; /* Fixed width */
-  height: 40px; /* Fixed height */
-  display: flex; /* Center the icon/text */
-  align-items: center; /* Align items vertically */
-  justify-content: center; /* Center items horizontally */
-  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  z-index: 200;
+  background-color: bl;
+  color: white; 
+  border: none; 
+  border-radius: 50%; 
+  padding: 8px;
+  font-size: 0.9rem; 
+  width: 40px; 
+  height: 40px; 
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
+  transition: background-color 0.3s, transform 0.3s;
 }
-
-/* Button hover state */
 .sidebar-toggle:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }
-
-/* Button focus state */
 .sidebar-toggle:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a subtle focus ring */
+  outline: none; 
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
 }
-
-/* Button icon */
 .sidebar-toggle span {
-  font-size: 1.2rem; /* Adjust font size for better visibility */
+  font-size: 1.2rem; 
 }
-
-
-/* Button hover state */
 .sidebar-toggle:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
 }
-
-/* Button focus state */
 .sidebar-toggle:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Add a subtle focus ring */
+  outline: none; 
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); 
 }
-
-/* Button icon */
 .sidebar-toggle span {
-  font-size: 1.2rem; /* Adjust font size for better visibility */
+  font-size: 1.2rem; 
 }
-
-/* Toggle Button Text */
 .sidebar-toggle span {
   font-size: 16px;
 }
