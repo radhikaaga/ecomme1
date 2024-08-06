@@ -27,6 +27,7 @@ export const Login =()=>{
       alert('Please fill in both email and password.');
       return;
     }
+  
         navigate('/dashboard');
       };
     
@@ -51,9 +52,6 @@ export const Login =()=>{
           <a href='#'>Forgot Password?</a>
         </div>
         <button type="submit">Login</button>
-        <div className='register-link'>
-          <p>Don't have an account? <a href='#'>Signup</a></p>
-        </div>
       </form>
     </div>
   );

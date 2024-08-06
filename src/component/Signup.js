@@ -5,34 +5,34 @@ import React, { useState } from 'react';
 import { FaUser } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
+import { signup } from '../Services/apiServices';
 export const Signup =()=>{
 
     const navigate = useNavigate();
     const [formData, setFormData] = useState({
-      first: '',
-      last: '',
+      firstName: '',
+      lastName: '',
       email: '',
-      password: ''
+      Password: ''
     });
 
     const handleChange = (e) => {
-      const { name, value } = e.target;
       setFormData({
         ...formData,
-        [name]: value
+        [e.target.name]:e.target.value
       });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit =async (e) => {
         e.preventDefault();
-        const { first, last, email, password } = formData;
-    if (!first || !last || !email || !password) {
-      alert('Please fill in all fields.');
-      return;
-    }
-        alert("signup successfull")
-        navigate('/login');
-
+        try {
+          const response= await signup(formData);
+          alert("signup successfull")
+          navigate('/login');
+        } 
+        catch (error) {
+          alert('Error during signup,please try again later');
+        }
       };
     
 
@@ -42,22 +42,37 @@ export const Signup =()=>{
       <h2>Signup Form</h2>
         <div className="form-group">
           <label htmlFor="first">First Name:</label>
-          <input type="text" id="first" name="first" value={formData.first} onChange={handleChange} />
+          <input type="text"
+           id="firstName"
+            name="firstName"
+             value={formData.firstName} 
+             onChange={handleChange} />
           <FaUser className='icon'/>
         </div>
         <div className="form-group">
           <label htmlFor="last">Last Name:</label>
-          <input type="text" id="last" name="last" value={formData.last} onChange={handleChange} />
+          <input type="text" id="lastName"
+           name="lastName" 
+           value={formData.lastName}
+            onChange={handleChange} />
           <FaUser className='icon'/>
         </div>
         <div className="form-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} />
+          <input type="email"
+           id="email"
+            name="email"
+             value={formData.email}
+              onChange={handleChange} />
           <IoIosMail className='icon'/>
         </div>
         <div className="form-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" name="password"  value={formData.password} onChange={handleChange} />
+          <input type="Password"
+           id="Password"
+            name="Password" 
+             value={formData.Password} 
+             onChange={handleChange} />
           <FaLock className='icon'/>
         </div>
         <div className='remember-forgot'>
@@ -65,7 +80,7 @@ export const Signup =()=>{
         </div>
         <button type="submit">Submit</button>
         <div className='register-link'>
-          <p>Already have an account? <a href='#'>Login</a></p>
+          <p>Already have an account? <a href='/Login'>Login</a></p>
         </div>
       </form>
     </div>

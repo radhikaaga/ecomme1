@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import './Sidebar.css';
-
+import './Dashboard.css';
+import { RxCross1 } from "react-icons/rx";
+import { HiOutlineBars3 } from "react-icons/hi2";
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -11,7 +12,7 @@ const Sidebar = () => {
   return (
     <div>
       <button className="sidebar-toggle" onClick={toggleSidebar}>
-        <span>{isOpen ? '☰' : '✖'}</span> {/* Icon to represent open/close */}
+        <span>{isOpen ? <HiOutlineBars3 /> : <RxCross1 />}</span>
       </button>
       <div className={`sidebar ${isOpen ? '' : 'hidden'}`}>
         <h2>Menu</h2>

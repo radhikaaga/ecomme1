@@ -9,10 +9,10 @@
   flex: 1;
 }
 .sidebar {
-  width: 250px;
-  background-color: #f4f4f4;
-  padding: 15px;
+  width: 200px;
+  background-color: #ddd;
   border-right: 1px solid #ddd;
+  height: 100%;
 }
 
 .sidebar h2 {
@@ -25,7 +25,8 @@
 }
 
 .sidebar ul li {
-  margin: 10px 0;
+  margin: 30px 0;
+  font-size: 30px;
 }
 
 .sidebar ul li a {
