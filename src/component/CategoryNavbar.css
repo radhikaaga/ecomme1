@@ -1,0 +1,55 @@
+/* src/component/CategoryNavbar.css */
+.category-navbar {
+    display: flex;
+    justify-content: center;
+    background-color: white; /* White background for a clean look */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  .category-links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Distribute links evenly */
+  }
+  
+  .category-link {
+    color: #282c3f; /* Dark text color */
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 500; /* Slightly lighter font weight */
+    font-size: 16px;
+    background-color: #fff200; /* Primary button color */
+    border-radius: 5px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .category-link:hover {
+    background-color: #0056b3; /* Darker shade of button color on hover */
+    color: white; /* White text color on hover */
+  }
+  
+  .category-link.active {
+    background-color: #ff3e6c; /* Myntra pink for active state */
+    color: white; /* White text color for active state */
+  }
+  
+  @media (max-width: 768px) {
+    .category-navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .category-links {
+      width: 100%;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .category-link {
+      padding: 10px 20px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,52 @@
+.grocery-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background for the page */
+  }
+  
+  .top-image {
+    width: 100%;
+    margin-bottom: 20px; /* Space between the image and the content */
+  }
+  
+  .top-image img {
+    width: 100%; /* Full width for the image */
+    height: auto;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .product-card {
+    background: #fff; /* White background for product cards */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    padding: 15px;
+  }
+  
+  .product-name {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    color: #007bff; /* Blue color for prices */
+    margin: 10px 0 0;
+  }
+  

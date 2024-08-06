@@ -1,0 +1,18 @@
+/* src/pages/Product.css */
+.product-page {
+    background: linear-gradient(to right, #f5f5f5, #ffffff); /* Gradient from light gray to white */
+    min-height: 100vh; /* Ensure the page takes at least the full viewport height */
+    color: #333; /* Default text color for better readability */
+    font-family: Arial, sans-serif;
+  }
+  
+  .product-page-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background for the content */
+    border-radius: 8px; /* Rounded corners for the content area */
+    max-width: 1200px; /* Limit the width of the content area */
+    margin: auto; /* Center the content area */
+  }
+  
